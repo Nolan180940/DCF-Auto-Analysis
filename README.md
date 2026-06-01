@@ -2,6 +2,8 @@
 
 This repository has been reduced to a DCF-only workspace.
 
+## Welcome for contributions cuz it's an early stage of the repo with definitely potential failures and errors. Please propose issues or PRs if possible. Thank you for your visiting and if helpful, click a STAR to support author:)
+
 ## Structure
 
 - scripts/dcf_dashboard/
