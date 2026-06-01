@@ -1,45 +1,83 @@
-# OpenStock — DCF 估值分析仪表板
+# OpenStock — DCF Valuation Dashboard
 
-基于 **Streamlit** 构建的自动化 DCF（Discounted Cash Flow，现金流折现）估值分析工具，用于快速评估公司内在价值。
+An automated Discounted Cash Flow (DCF) valuation analysis tool built with Streamlit. It enables rapid assessment of a company's intrinsic value through interactive visualizations and financial data retrieval.
 
-## Welcome for contributions cuz it's an early stage of the repo with definitely potential failures and errors. Please propose issues or PRs if possible. Thank you for your visiting and if helpful, click a STAR to support author:)
+## Features
 
-## Structure
+- **Automated Financial Data Retrieval**: Fetches company financial statements via the Finnhub API
+- **Free Cash Flow Calculation**: Computes free cash flow and performs discounted cash flow valuation
+- **Interactive Dashboard**: Visualizes valuation results and key assumptions through Streamlit
+- **Customizable Parameters**: Adjustable WACC, projection range, and other key assumptions
 
-## 功能概述
+## Installation
 
-- 自动获取公司财务数据（通过 Finnhub API）
-- 计算自由现金流并进行折现估值
-- 交互式 Streamlit 仪表板，可视化展示估值结果
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/OpenStock.git
+   cd OpenStock
+   ```
 
----
-
-  ```powershell
+2. Install dependencies:
+   ```bash
    pip install -r scripts/dcf_dashboard/requirements.txt
-  ```
+   ```
 
-2. Set Finnhub API key (PowerShell): YOU NEED TO USE YOUR OWN FINNHUB API KEY (FREE TO SIGH UP AND FREE TO RETRIEVE)
+## Configuration
 
-  ```powershell
-   $env:FINNHUB_API_KEY = "your_key_here"
-  ```
+Set your Finnhub API key as an environment variable:
 
-### 2. 配置 API 密钥
-
-  ```powershell
-   streamlit run scripts/dcf_dashboard/dcf_dashboard.py
-  ```
-
-**PowerShell：**
+**PowerShell:**
 ```powershell
 $env:FINNHUB_API_KEY = "your_finnhub_api_key"
 ```
 
-- This workspace now focuses only on automatic DCF analysis.
-- You are supposed to be equipped with expertise in accounting, and basic DCF Valuation skills. The repo and relative python scripts are simply providing fundamental information and valution process visualization for investment suggestion purpose only, which indicates inrresponsibility for your actual investment behaviors and decisions.
-- You need to swipe the bar for WACC assumptions and decide your own projection range and key parameters assumptions.
-- Get your API Keys dierctly from finnhub official website.
+**Bash:**
+```bash
+export FINNHUB_API_KEY="your_finnhub_api_key"
+```
 
-## DEMO WEBSITE:
+You can obtain a free API key from the [Finnhub official website](https://finnhub.io/).
 
-[Auto DCF Analysis](https://auto-dcf.streamlit.app/)
+## Usage
+
+Run the DCF dashboard:
+
+```bash
+streamlit run scripts/dcf_dashboard/dcf_dashboard.py
+```
+
+In the dashboard, you can:
+- Enter a stock ticker symbol to retrieve financial data
+- Adjust WACC assumptions using the sliders
+- Set projection range for future cash flows
+- View intrinsic value calculations and visualizations
+
+## Requirements
+
+- Python 3.8+
+- Streamlit
+- pandas, numpy, plotly, requests
+
+See `scripts/dcf_dashboard/requirements.txt` for the complete list of dependencies.
+
+## Demo
+
+A live demo is available at [Auto DCF Analysis](https://auto-dcf.streamlit.app/).
+
+## Disclaimer
+
+This tool provides fundamental financial information and valuation process visualization for educational and informational purposes only. It should not be considered as investment advice or a basis for actual investment decisions. Users are responsible for their own investment choices and should possess appropriate knowledge in accounting and DCF valuation.
+
+## Contributing
+
+Contributions are welcome. This project is in early development and may contain bugs or incomplete features. Please feel free to:
+
+- Open issues for bugs or feature requests
+- Submit pull requests with improvements
+- Add test cases or documentation
+
+When contributing, please ensure your changes follow the existing code style and include appropriate documentation.
+
+## License
+
+This project is provided for educational purposes. Please verify API usage terms with Finnhub before use.
